@@ -1,0 +1,9 @@
+git
+pcscd
+libpcsclite1
+libpcsclite-dev
+libcap2-bin
+bluetooth
+bluez
+libbluetooth-dev
+libudev-dev

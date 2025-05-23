@@ -1,0 +1,15 @@
+[Unit]
+Description=Node.js XR App
+After=network.target
+ConditionPathExists=/home/pi/xr-app
+
+[Service]
+ExecStart=/bin/bash -c 'SERIAL=$(cat /home/pi/.serial) /usr/bin/node /home/pi/xr-app/index.js'
+Restart=always
+RestartSec=1s
+User=pi
+Environment=NODE_ENV=production
+WorkingDirectory=/home/pi/xr-app
+
+[Install]
+WantedBy=multi-user.target
